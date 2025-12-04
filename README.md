@@ -6,8 +6,9 @@ Pages légales modernes et professionnelles pour l'application mobile ikaConfort
 
 | Page | URL |
 |------|-----|
-| **Politique de Confidentialité** | [privacy-policy.html](https://novatech25.github.io/confidential-page-ikaconfort/privacy-policy.html) |
-| **Conditions d'Utilisation** | [terms-of-service.html](https://novatech25.github.io/confidential-page-ikaconfort/terms-of-service.html) |
+| **🏠 Accueil (Centre Juridique)** | [index.html](https://novatech25.github.io/confidential-page-ikaconfort/) |
+| **🛡️ Politique de Confidentialité** | [privacy-policy.html](https://novatech25.github.io/confidential-page-ikaconfort/privacy-policy.html) |
+| **📜 Conditions d'Utilisation** | [terms-of-service.html](https://novatech25.github.io/confidential-page-ikaconfort/terms-of-service.html) |
 
 ## ✨ Caractéristiques
 
