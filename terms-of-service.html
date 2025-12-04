@@ -3,225 +3,817 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conditions Générales d'Utilisation de l'application ikaConfort - Votre plateforme immobilière de confiance">
+    <meta name="theme-color" content="#FF9800">
     <title>Conditions d'Utilisation - ikaConfort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #FF9800;
+            --primary-dark: #F57C00;
+            --secondary: #ff5722;
+            --accent: #ffb74d;
+            --success: #48bb78;
+            --warning: #ed8936;
+            --danger: #f56565;
+            --info: #4299e1;
+            --dark: #1a202c;
+            --gray-900: #1a202c;
+            --gray-800: #2d3748;
+            --gray-700: #4a5568;
+            --gray-600: #718096;
+            --gray-500: #a0aec0;
+            --gray-400: #cbd5e0;
+            --gray-300: #e2e8f0;
+            --gray-200: #edf2f7;
+            --gray-100: #f7fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
+
+        html {
+            scroll-behavior: smooth;
         }
-        .container {
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--gray-700);
+            background: var(--gray-100);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--gradient);
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: var(--shadow-lg);
         }
-        h1 {
-            color: #FF9800;
-            margin-bottom: 10px;
+
+        .logo-text {
             font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
         }
+
+        .header h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .header .subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+        }
+
         .last-updated {
-            color: #999;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            color: var(--white);
             font-size: 14px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #333;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-bottom: 2px solid #FF9800;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #555;
             margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 16px;
         }
-        p, li {
-            margin-bottom: 10px;
-            color: #555;
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
-        ul, ol {
-            margin-left: 20px;
+
+        .content-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 30px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .summary-box h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .summary-box p {
+            color: var(--gray-700);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Table of Contents */
+        .toc {
+            padding: 30px;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .toc h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 15px;
         }
-        .highlight {
-            background: #fff8e1;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #FF9800;
-            margin: 20px 0;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+            list-style: none;
         }
-        .warning {
-            background: #ffebee;
-            padding: 15px;
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
             border-radius: 8px;
-            border-left: 4px solid #f44336;
-            margin: 20px 0;
+            transition: all 0.2s ease;
         }
-        .contact {
-            background: #f9f9f9;
+
+        .toc-list a:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .toc-list .num {
+            background: var(--primary);
+            color: var(--white);
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-900);
+            letter-spacing: -0.5px;
+        }
+
+        .section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin: 25px 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h3::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .section p {
+            color: var(--gray-600);
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .section ul, .section ol {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .section li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: var(--gray-600);
+            font-size: 15px;
+        }
+
+        .section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section li strong {
+            color: var(--gray-800);
+            font-weight: 600;
+        }
+
+        /* Alert Boxes */
+        .alert-box {
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .alert-box.info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 4px solid var(--info);
+        }
+
+        .alert-box.warning {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 4px solid var(--warning);
+        }
+
+        .alert-box.danger {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 4px solid var(--danger);
+        }
+
+        .alert-box.success {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 4px solid var(--success);
+        }
+
+        .alert-box h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .alert-box p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .alert-box ul {
+            margin: 10px 0 0;
+        }
+
+        .alert-box li::before {
+            background: var(--danger);
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
+        }
+
+        .feature-card .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--gradient);
+            border-radius: 16px;
+            padding: 30px;
             margin-top: 30px;
+            color: var(--white);
         }
-        a {
-            color: #FF9800;
+
+        .contact-section h3 {
+            color: var(--white);
+            margin: 0 0 20px 0;
+            font-size: 20px;
         }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
+
+        .contact-section h3::before {
+            display: none;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .contact-info span {
+            display: block;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .contact-info strong {
+            font-size: 15px;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--gray-500);
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px 60px;
             }
-            h1 {
-                font-size: 24px;
+
+            .content {
+                padding: 25px;
             }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease forwards;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Conditions Générales d'Utilisation</h1>
-        <p class="last-updated">Dernière mise à jour : Décembre 2024</p>
-
-        <div class="highlight">
-            <strong>Important :</strong> En utilisant ikaConfort, vous acceptez ces conditions d'utilisation. Veuillez les lire attentivement avant d'utiliser l'application.
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🏠</div>
+                <span class="logo-text">ikaConfort</span>
+            </div>
+            <h1>Conditions Générales d'Utilisation</h1>
+            <p class="subtitle">Les règles qui régissent notre service</p>
+            <span class="last-updated">📅 Dernière mise à jour : Décembre 2024</span>
         </div>
+    </header>
 
-        <h2>1. Acceptation des Conditions</h2>
-        <p>En accédant à l'application ikaConfort ou en l'utilisant, vous acceptez d'être lié par ces Conditions Générales d'Utilisation ("CGU"). Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'application.</p>
+    <main class="container">
+        <div class="content-card">
+            <!-- Summary -->
+            <div class="summary-box">
+                <h2>📜 Important</h2>
+                <p>En utilisant l'application ikaConfort, vous acceptez ces Conditions Générales d'Utilisation. Ces règles sont conçues pour <strong>garantir une expérience sûre et agréable</strong> pour tous nos utilisateurs. Prenez quelques minutes pour les lire attentivement.</p>
+            </div>
 
-        <h2>2. Description du Service</h2>
-        <p>ikaConfort est une application mobile de recherche immobilière qui permet aux utilisateurs de :</p>
-        <ul>
-            <li>Consulter des annonces de propriétés à vendre ou à louer</li>
-            <li>Rechercher des biens immobiliers selon différents critères</li>
-            <li>Contacter des agents immobiliers</li>
-            <li>Prendre des rendez-vous de visite</li>
-            <li>Effectuer des réservations</li>
-            <li>Sauvegarder des propriétés en favoris</li>
-        </ul>
+            <!-- Table of Contents -->
+            <nav class="toc">
+                <h3>Sommaire</h3>
+                <ul class="toc-list">
+                    <li><a href="#acceptation"><span class="num">1</span> Acceptation</a></li>
+                    <li><a href="#services"><span class="num">2</span> Description du Service</a></li>
+                    <li><a href="#compte"><span class="num">3</span> Compte Utilisateur</a></li>
+                    <li><a href="#utilisation"><span class="num">4</span> Utilisation Acceptable</a></li>
+                    <li><a href="#propriete"><span class="num">5</span> Propriété Intellectuelle</a></li>
+                    <li><a href="#annonces"><span class="num">6</span> Contenu des Annonces</a></li>
+                    <li><a href="#responsabilite"><span class="num">7</span> Responsabilité</a></li>
+                    <li><a href="#contact"><span class="num">8</span> Contact</a></li>
+                </ul>
+            </nav>
 
-        <h2>3. Inscription et Compte Utilisateur</h2>
-        
-        <h3>3.1 Création de compte</h3>
-        <p>Pour accéder à certaines fonctionnalités, vous devez créer un compte en fournissant des informations exactes et complètes.</p>
+            <div class="content">
+                <!-- Section 1 -->
+                <section class="section" id="acceptation">
+                    <div class="section-header">
+                        <div class="section-icon">✅</div>
+                        <h2>1. Acceptation des Conditions</h2>
+                    </div>
+                    <p>En accédant à l'application <strong>ikaConfort</strong> ou en l'utilisant, vous reconnaissez avoir lu, compris et accepté d'être lié par ces Conditions Générales d'Utilisation ("CGU").</p>
+                    <p>Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'application.</p>
+                    
+                    <div class="alert-box info">
+                        <h4>ℹ️ Application de ces CGU</h4>
+                        <p>Ces conditions s'appliquent à tous les utilisateurs de l'application ikaConfort sur iOS et Android, y compris les clients, les agents immobiliers et les administrateurs.</p>
+                    </div>
+                </section>
 
-        <h3>3.2 Responsabilité du compte</h3>
-        <ul>
-            <li>Vous êtes responsable de la confidentialité de vos identifiants</li>
-            <li>Vous devez nous informer immédiatement de tout accès non autorisé</li>
-            <li>Vous êtes responsable de toutes les activités effectuées depuis votre compte</li>
-        </ul>
+                <!-- Section 2 -->
+                <section class="section" id="services">
+                    <div class="section-header">
+                        <div class="section-icon">🏠</div>
+                        <h2>2. Description du Service</h2>
+                    </div>
+                    <p>ikaConfort est une plateforme mobile de recherche et de gestion immobilière qui offre les services suivants :</p>
 
-        <h3>3.3 Conditions d'âge</h3>
-        <p>Vous devez avoir au moins 18 ans pour utiliser ikaConfort.</p>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="icon">🔍</div>
+                            <h4>Recherche de biens</h4>
+                            <p>Consultez des annonces de propriétés à vendre ou à louer avec des filtres avancés.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon">📍</div>
+                            <h4>Géolocalisation</h4>
+                            <p>Trouvez des propriétés à proximité grâce à la carte interactive.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon">💬</div>
+                            <h4>Contact agents</h4>
+                            <p>Communiquez directement avec les agents immobiliers.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon">📅</div>
+                            <h4>Rendez-vous</h4>
+                            <p>Planifiez des visites de propriétés en quelques clics.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon">📋</div>
+                            <h4>Réservations</h4>
+                            <p>Réservez des propriétés pour des séjours temporaires.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon">❤️</div>
+                            <h4>Favoris</h4>
+                            <p>Sauvegardez vos propriétés préférées pour y revenir plus tard.</p>
+                        </div>
+                    </div>
+                </section>
 
-        <h2>4. Utilisation Acceptable</h2>
-        <p>En utilisant ikaConfort, vous vous engagez à :</p>
-        <ul>
-            <li>Fournir des informations véridiques et à jour</li>
-            <li>Utiliser l'application conformément aux lois applicables</li>
-            <li>Respecter les droits des autres utilisateurs</li>
-            <li>Ne pas utiliser l'application à des fins frauduleuses</li>
-        </ul>
+                <!-- Section 3 -->
+                <section class="section" id="compte">
+                    <div class="section-header">
+                        <div class="section-icon">👤</div>
+                        <h2>3. Compte Utilisateur</h2>
+                    </div>
 
-        <h3>4.1 Comportements interdits</h3>
-        <div class="warning">
-            <p>Il est strictement interdit de :</p>
-            <ul>
-                <li>Publier du contenu faux, trompeur ou diffamatoire</li>
-                <li>Harceler ou menacer d'autres utilisateurs</li>
-                <li>Tenter de pirater ou compromettre la sécurité de l'application</li>
-                <li>Utiliser des robots ou scripts automatisés</li>
-                <li>Collecter des données d'autres utilisateurs sans autorisation</li>
-                <li>Contourner les mesures de sécurité</li>
-            </ul>
+                    <h3>Création de compte</h3>
+                    <p>Pour accéder à toutes les fonctionnalités, vous devez créer un compte en fournissant des informations exactes et à jour :</p>
+                    <ul>
+                        <li>Nom complet</li>
+                        <li>Adresse e-mail valide</li>
+                        <li>Numéro de téléphone (optionnel)</li>
+                        <li>Mot de passe sécurisé (minimum 6 caractères)</li>
+                    </ul>
+
+                    <h3>Responsabilité du compte</h3>
+                    <ul>
+                        <li><strong>Confidentialité :</strong> Vous êtes responsable de la confidentialité de vos identifiants de connexion</li>
+                        <li><strong>Notification :</strong> Informez-nous immédiatement de tout accès non autorisé à votre compte</li>
+                        <li><strong>Activités :</strong> Vous êtes responsable de toutes les activités effectuées depuis votre compte</li>
+                    </ul>
+
+                    <div class="alert-box warning">
+                        <h4>⚠️ Conditions d'âge</h4>
+                        <p>Vous devez avoir <strong>au moins 18 ans</strong> pour créer un compte et utiliser ikaConfort. L'application n'est pas destinée aux mineurs.</p>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="section" id="utilisation">
+                    <div class="section-header">
+                        <div class="section-icon">📋</div>
+                        <h2>4. Utilisation Acceptable</h2>
+                    </div>
+                    <p>En utilisant ikaConfort, vous vous engagez à :</p>
+                    <ul>
+                        <li>Fournir des informations véridiques et à jour</li>
+                        <li>Utiliser l'application conformément aux lois applicables</li>
+                        <li>Respecter les droits des autres utilisateurs</li>
+                        <li>Ne pas utiliser l'application à des fins frauduleuses ou illégales</li>
+                    </ul>
+
+                    <div class="alert-box danger">
+                        <h4>🚫 Comportements Strictement Interdits</h4>
+                        <p>Les actions suivantes entraîneront la suspension ou la suppression de votre compte :</p>
+                        <ul>
+                            <li>Publier du contenu faux, trompeur ou diffamatoire</li>
+                            <li>Harceler, menacer ou intimider d'autres utilisateurs</li>
+                            <li>Tenter de pirater ou compromettre la sécurité de l'application</li>
+                            <li>Utiliser des robots, scripts ou outils automatisés</li>
+                            <li>Collecter des données d'autres utilisateurs sans autorisation</li>
+                            <li>Usurper l'identité d'une autre personne ou entité</li>
+                            <li>Publier du contenu illégal, offensant ou inapproprié</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="section" id="propriete">
+                    <div class="section-header">
+                        <div class="section-icon">©️</div>
+                        <h2>5. Propriété Intellectuelle</h2>
+                    </div>
+                    <p>Tous les contenus de l'application ikaConfort sont protégés par les lois sur la propriété intellectuelle :</p>
+                    <ul>
+                        <li><strong>Marques :</strong> Le nom "ikaConfort" et le logo sont des marques déposées</li>
+                        <li><strong>Code source :</strong> L'application et son code sont protégés par le droit d'auteur</li>
+                        <li><strong>Design :</strong> L'interface et le design sont notre propriété exclusive</li>
+                        <li><strong>Contenu :</strong> Textes, images et autres médias sont protégés</li>
+                    </ul>
+
+                    <div class="alert-box info">
+                        <h4>ℹ️ Utilisation autorisée</h4>
+                        <p>Vous pouvez utiliser l'application pour votre usage personnel uniquement. Toute reproduction, modification ou distribution du contenu sans autorisation écrite est interdite.</p>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="section" id="annonces">
+                    <div class="section-header">
+                        <div class="section-icon">🏘️</div>
+                        <h2>6. Contenu des Annonces</h2>
+                    </div>
+
+                    <h3>Responsabilité des agents</h3>
+                    <p>Les annonces immobilières sont publiées par des agents immobiliers indépendants ou des partenaires. <strong>ikaConfort n'est pas responsable</strong> de :</p>
+                    <ul>
+                        <li>L'exactitude des informations publiées dans les annonces</li>
+                        <li>La disponibilité réelle des propriétés</li>
+                        <li>Les prix affichés et leurs variations</li>
+                        <li>La qualité des photos et descriptions</li>
+                        <li>Les transactions effectuées entre utilisateurs et agents</li>
+                    </ul>
+
+                    <div class="alert-box warning">
+                        <h4>⚠️ Recommandation importante</h4>
+                        <p>Nous vous recommandons fortement de <strong>vérifier toutes les informations</strong> directement auprès des agents immobiliers avant toute transaction ou engagement.</p>
+                    </div>
+
+                    <h3>Réservations et Rendez-vous</h3>
+                    <ul>
+                        <li>Les réservations sont soumises à confirmation par l'agent immobilier</li>
+                        <li>Vous pouvez annuler une réservation en attente depuis l'application</li>
+                        <li>Les conditions d'annulation peuvent varier selon les propriétés</li>
+                        <li>ikaConfort ne garantit pas la disponibilité des créneaux de visite</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7 -->
+                <section class="section" id="responsabilite">
+                    <div class="section-header">
+                        <div class="section-icon">⚖️</div>
+                        <h2>7. Limitation de Responsabilité</h2>
+                    </div>
+
+                    <div class="alert-box danger">
+                        <h4>📌 Clause importante</h4>
+                        <p>L'application ikaConfort est fournie "en l'état". Dans les limites permises par la loi, nous déclinons toute responsabilité pour :</p>
+                        <ul>
+                            <li>Les dommages directs, indirects ou consécutifs</li>
+                            <li>Les pertes de données ou interruptions de service</li>
+                            <li>Les transactions entre utilisateurs et agents immobiliers</li>
+                            <li>Les litiges immobiliers de toute nature</li>
+                            <li>L'exactitude des informations fournies par des tiers</li>
+                        </ul>
+                    </div>
+
+                    <h3>Indemnisation</h3>
+                    <p>Vous acceptez d'indemniser et de dégager de toute responsabilité ikaConfort, ses dirigeants, employés et partenaires contre toute réclamation résultant de :</p>
+                    <ul>
+                        <li>Votre utilisation de l'application</li>
+                        <li>Votre violation de ces CGU</li>
+                        <li>Votre violation des droits d'un tiers</li>
+                    </ul>
+
+                    <h3>Modifications du Service</h3>
+                    <p>Nous nous réservons le droit de :</p>
+                    <ul>
+                        <li>Modifier ou interrompre tout ou partie du service à tout moment</li>
+                        <li>Mettre à jour ces CGU (vous serez informé des changements significatifs)</li>
+                        <li>Suspendre ou supprimer des comptes en cas de violation des CGU</li>
+                    </ul>
+
+                    <h3>Droit Applicable</h3>
+                    <p>Ces CGU sont régies par le droit français. Tout litige sera soumis à la juridiction exclusive des tribunaux compétents de Paris, France.</p>
+                </section>
+
+                <!-- Section 8 - Contact -->
+                <section class="section" id="contact">
+                    <div class="section-header">
+                        <div class="section-icon">💬</div>
+                        <h2>8. Nous Contacter</h2>
+                    </div>
+                    <p>Pour toute question concernant ces conditions d'utilisation ou pour signaler un problème, notre équipe est disponible pour vous aider.</p>
+
+                    <div class="contact-section">
+                        <h3>📞 Contactez-nous</h3>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-info">
+                                    <span>Email général</span>
+                                    <strong><a href="mailto:contact@ikaconfort.com">contact@ikaconfort.com</a></strong>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🛡️</div>
+                                <div class="contact-info">
+                                    <span>Support juridique</span>
+                                    <strong><a href="mailto:legal@ikaconfort.com">legal@ikaconfort.com</a></strong>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🏢</div>
+                                <div class="contact-info">
+                                    <span>Éditeur</span>
+                                    <strong>ikaConfort SAS</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-box success" style="margin-top: 30px;">
+                        <h4>✅ Historique des modifications</h4>
+                        <p><strong>Décembre 2024 :</strong> Version initiale des Conditions Générales d'Utilisation.</p>
+                    </div>
+                </section>
+            </div>
         </div>
+    </main>
 
-        <h2>5. Propriété Intellectuelle</h2>
-        <p>Tous les contenus de l'application (logos, textes, images, code) sont la propriété de ikaConfort ou de ses partenaires et sont protégés par les lois sur la propriété intellectuelle.</p>
-        <p>Vous n'êtes pas autorisé à :</p>
-        <ul>
-            <li>Copier, modifier ou distribuer le contenu sans autorisation</li>
-            <li>Utiliser les marques de ikaConfort sans permission écrite</li>
-            <li>Créer des œuvres dérivées basées sur l'application</li>
-        </ul>
-
-        <h2>6. Contenu des Annonces</h2>
-        
-        <h3>6.1 Responsabilité des agents</h3>
-        <p>Les annonces immobilières sont publiées par des agents immobiliers indépendants. ikaConfort n'est pas responsable de :</p>
-        <ul>
-            <li>L'exactitude des informations des annonces</li>
-            <li>La disponibilité des propriétés</li>
-            <li>Les prix affichés</li>
-            <li>Les photos et descriptions</li>
-        </ul>
-
-        <h3>6.2 Vérification</h3>
-        <p>Nous vous recommandons de vérifier toutes les informations directement auprès des agents avant toute transaction.</p>
-
-        <h2>7. Réservations et Rendez-vous</h2>
-        <ul>
-            <li>Les réservations et rendez-vous sont soumis à confirmation par l'agent</li>
-            <li>Vous pouvez annuler une réservation en attente depuis l'application</li>
-            <li>Les conditions d'annulation peuvent varier selon les propriétés</li>
-        </ul>
-
-        <h2>8. Limitation de Responsabilité</h2>
-        <div class="warning">
-            <p>ikaConfort est fourni "tel quel". Nous déclinons toute responsabilité pour :</p>
-            <ul>
-                <li>Les dommages indirects ou consécutifs</li>
-                <li>Les pertes de données ou interruptions de service</li>
-                <li>Les transactions effectuées entre utilisateurs et agents</li>
-                <li>Les litiges immobiliers</li>
-            </ul>
-        </div>
-
-        <h2>9. Indemnisation</h2>
-        <p>Vous acceptez d'indemniser ikaConfort contre toute réclamation résultant de votre utilisation de l'application ou de votre violation de ces CGU.</p>
-
-        <h2>10. Modification des Services</h2>
-        <p>Nous nous réservons le droit de :</p>
-        <ul>
-            <li>Modifier ou interrompre tout ou partie du service</li>
-            <li>Mettre à jour ces CGU à tout moment</li>
-            <li>Suspendre ou supprimer des comptes en cas de violation</li>
-        </ul>
-
-        <h2>11. Résiliation</h2>
-        <p>Vous pouvez supprimer votre compte à tout moment depuis les paramètres de l'application. Nous pouvons également résilier votre accès en cas de violation des CGU.</p>
-
-        <h2>12. Droit Applicable</h2>
-        <p>Ces CGU sont régies par le droit français. Tout litige sera soumis à la juridiction exclusive des tribunaux compétents.</p>
-
-        <h2>13. Divisibilité</h2>
-        <p>Si une disposition de ces CGU est jugée invalide, les autres dispositions resteront en vigueur.</p>
-
-        <h2>14. Contact</h2>
-        <div class="contact">
-            <p>Pour toute question concernant ces conditions :</p>
-            <p><strong>Email :</strong> <a href="mailto:contact@ikaconfort.com">contact@ikaconfort.com</a></p>
-            <p><strong>Adresse :</strong> [Votre adresse]</p>
-        </div>
-
-        <h2>15. Historique des Modifications</h2>
-        <ul>
-            <li><strong>Décembre 2024 :</strong> Version initiale</li>
-        </ul>
-    </div>
+    <footer class="footer">
+        <p>© 2024 ikaConfort. Tous droits réservés.</p>
+        <p><a href="terms-of-service.html">Conditions d'utilisation</a> • <a href="privacy-policy.html">Politique de confidentialité</a></p>
+    </footer>
 </body>
 </html>

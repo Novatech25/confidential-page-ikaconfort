@@ -1,25 +1,37 @@
-# Pages Légales - ikaConfort
+# 📜 Pages Légales - ikaConfort
 
-Ce repository contient les pages légales de l'application ikaConfort.
+Pages légales modernes et professionnelles pour l'application mobile ikaConfort.
 
-## Pages disponibles
+## 🌐 URLs en Production
 
-- **[Politique de Confidentialité](privacy-policy.html)** - Conforme RGPD
-- **[Conditions d'Utilisation](terms-of-service.html)** - CGU complètes
+| Page | URL |
+|------|-----|
+| **Politique de Confidentialité** | [privacy-policy.html](https://novatech25.github.io/confidential-page-ikaconfort/privacy-policy.html) |
+| **Conditions d'Utilisation** | [terms-of-service.html](https://novatech25.github.io/confidential-page-ikaconfort/terms-of-service.html) |
 
-## URLs GitHub Pages
+## ✨ Caractéristiques
 
-Après activation de GitHub Pages, les pages seront accessibles à :
+- ✅ Design moderne et professionnel
+- ✅ Interface responsive (mobile & desktop)
+- ✅ Police Inter (Google Fonts)
+- ✅ Animations fluides
+- ✅ Navigation par sommaire
+- ✅ Conformité RGPD
+- ✅ Optimisé pour Play Store & App Store
 
-- https://novatech25.github.io/confidential-page-ikaconfort/privacy-policy.html
-- https://novatech25.github.io/confidential-page-ikaconfort/terms-of-service.html
+## 📱 Conformité Stores
 
-## Activation GitHub Pages
+Ces pages sont conçues pour répondre aux exigences de :
+- **Google Play Store** - Data Safety & Privacy Policy
+- **Apple App Store** - App Privacy & Terms
 
-1. Aller dans Settings > Pages
-2. Source: Deploy from a branch
-3. Branch: main / (root)
-4. Save
+## 🚀 Activation GitHub Pages
+
+1. Repository Settings → Pages
+2. Source: `Deploy from a branch`
+3. Branch: `main` / `(root)`
+4. Cliquer **Save**
+5. Attendre 1-2 minutes
 
 ---
 
